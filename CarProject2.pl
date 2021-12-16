@@ -291,7 +291,7 @@ printRecord([]) :- write('No Record'), nl.
 printRecord(L) :- write('Record: '), nl, iterateRecord(L).
 
 
-% Recursivelt iterates over the record list head first
+% Recursively iterates over the record list head first
 iterateRecord([]).
 iterateRecord([H|[]]) :- write('   * '), write(H), nl.
 iterateRecord([H|T]) :- write('   * '), write(H), nl, iterateRecord(T).

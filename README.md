@@ -8,7 +8,7 @@ From Morris Ronsenthal’s Diagnostic flowchart for a car that won’t start or 
 
 
 ## Why Prolog: 
-Backtracking advantage, better support/updates/widespread use than, say, CLIPS, Better than C++ because leverage string pattern to update our systems easily. Rather than messing with if statements and nested if statements and such, we just need to add more facts.
+Prolog has a backtracking advantage, which is parallel. Therefore, this takes advantage of parallel processing and is more efficient. Backtracking is also a natural top-down solution to traversing decision trees. In such a case where the answer to a query node is “dont_know”, traverse paths for each child node of an “unanswered node” to receive multiple solutions via backtracking. Also, Prolog has better support/updates/widespread use than, say, CLIPS. Prolog is more suitable for our application than C++ because it leverages string pattern matching and unification to traverse through the decision tree. We avoid writing many counterintuitive if statements and nested if statements and such. Also, we do not need to overhaul our code each time a new fact is added. We just need to add more facts.
 
 
 ## Structure: 
@@ -32,3 +32,6 @@ Our code did not even have any facts!
 Even worse if we wanted to update rules, we would have to rehaul code for every fact we have written. Because the facts and rules were essentially intertwined.
 
 Adding new rules in our new version was simple. We just add a constant amount of code in the inference logic section and everything works like magic. Actually it’s not like magic. Everything works through the use of Prolog’s pattern matching, unification, backtracking, and other elements such as the lists and cut operator
+
+## Possible Extensions/Future Work:
+Prolog is mainly used for backends of an application. In our prolog file, when a user reaches a diagnosis node, we print out the diagnosis for the user. However, a single sentence diagnosis may not be sufficient to help the user fix his or her car issues. For instance, the diagnosis of cleaning the terminals off the battery is not helpful for a person who does not know what the battery looks like. We may write more verbose diagnoses and print that to the user, but we could do better by building a front end. The front end could be a website for example that uses the Tau Prolog library to interface javascript with prolog queries. Instead of storing single-sentence diagnosis to print to the user, we could store web pages. Once a diagnosis or a series of candidate diagnoses, the users can be directly sent or given a list of links to said web pages. The webpages can provide much more information, including textual information, pictures, videos, and a user-friendly interface.
