@@ -1,4 +1,4 @@
-# Diagnosing Common Reasons for Car Failure
+# Diagnosing Common Reasons for Car Failure Using Prolog
 
 ## Goal: 
 Our object is to create an expert system, our expert being a car mechanic, and encode his or her knowledge with Prolog. The expert system will diagnose many reasons why cars fail to start.
